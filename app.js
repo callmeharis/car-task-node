@@ -31,7 +31,7 @@ const fileUpload = require("express-fileupload");
 
 app.use(
   cors({
-    origin: "http://localhost:3000", // Allow requests from the frontend
+    origin: `${process.env.FRONTEND_BASE_URL}`,
   })
 );
 app.use(express.static(path.resolve(__dirname, "./client/build")));
